@@ -1,17 +1,17 @@
 <template>
   <div id="app">
     <Header />
-    <Todoes />
+    <Todos />
   </div>
 </template>
 
 <script>
 import Header from './components/Header'
-import Todoes from './components/Todoes'
+import Todos from './components/Todos'
 
 export default {
   name: 'App',
-  components: { Header, Todoes }
+  components: { Header, Todos }
 }
 </script>
 
