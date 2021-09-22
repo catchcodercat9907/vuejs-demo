@@ -6,7 +6,7 @@
       @change="markItemCompleted" 
     />
     {{ todoProps.title }}
-    <button class="del-btn">
+    <button class="del-btn" @click="deleteItem">
       Delete
     </button>
   </p>
@@ -23,8 +23,13 @@ export default {
       // console.log(props)
       context.emit('item-completed', props.todoProps.id)
     }
+
+    const deleteItem = () => {
+      context.emit('delete-item', props.todoProps.id)
+    }
     return {
-      markItemCompleted
+      markItemCompleted,
+      deleteItem
     }
   }
 }
